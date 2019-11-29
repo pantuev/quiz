@@ -40,6 +40,7 @@ class QuestionBlock(Frame):
             self.label_answer['text'] = "Не верно"
             self.label_answer['fg'] = "#E50914"
         self.label_answer.pack()
+        self.update()
         sleep(2)
         self.quit()
     def __init__(self, master, q:Question):
