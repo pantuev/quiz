@@ -19,5 +19,6 @@ def csvAdapter(filename = 'quizquestions.csv')->list:
             questions.append(Question(row[0], answers, 0))
     return questions
 
-def getQuestions(source = csvAdapter) ->list :
-    return source()
+
+def getQuestions(source = csvAdapter, **kvarg) ->list :
+    return source(**kvarg)
